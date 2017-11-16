@@ -13,7 +13,7 @@ int wmain(void) {
     int contrs = 0;
 
     int size = lstrlenW(str);
-    WORD types[size];
+    WORD types[MAX_PATH];
     ZeroMemory(types, size);
 
     bool rv = GetStringTypeW(CT_CTYPE1, str, size, types);

@@ -25,7 +25,7 @@ int wmain(void) {
 
     if (r != 0) {
 
-        wcscat_s(L"wcscat_s() failed %ld", r);
+        wprintf(L"wcscat_s() failed %ld", r);
     }
 
     wprintf_s(buf);

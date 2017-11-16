@@ -56,7 +56,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg,
             if (HIWORD(wParam) == BN_CLICKED) {
 
                 int len = GetWindowTextLengthW(hwndEdit) + 1;
-                wchar_t text[len];
+                wchar_t text[MAX_PATH];
 
                 GetWindowTextW(hwndEdit, text, len);
                 SetWindowTextW(hwnd, text);

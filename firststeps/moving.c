@@ -1,5 +1,6 @@
 #include <windows.h>
 #include <wchar.h>
+#include <strsafe.h>
 
 LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
 void CreateLabels(HWND);
@@ -50,10 +51,10 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg,
       
         GetWindowRect(hwnd, &rect);
 
-        StringCbPrintfW(buf, BUF_LEN, L"%ld", rect.left);  
+        StringCbPrintfW(buf, MAX_PATH, L"%ld", rect.left);  
         SetWindowTextW(hwndSta1, buf);
 
-        StringCbPrintfW(buf, BUF_LEN, L"%ld", rect.top);  
+        StringCbPrintfW(buf, MAX_PATH, L"%ld", rect.top);  
         SetWindowTextW(hwndSta2, buf);
 
         break;

@@ -10,7 +10,7 @@ int main(void) {
 
     int len = lstrlenW(s1) + lstrlenW(s2) 
         + lstrlenW(s3) + lstrlenW(s4);
-    wchar_t buf[len+1];
+    wchar_t buf[MAX_PATH];
   
     lstrcpyW(buf, s1);
     lstrcatW(buf, s2);

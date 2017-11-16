@@ -8,7 +8,7 @@ int wmain(void) {
 
     size_t size = wcslen(sentence) + 1;
 
-    wchar_t buf[size];
+    wchar_t buf[MAX_PATH];
     ZeroMemory(buf, size); 
 
     HRESULT r = StringCchCopyW(buf, size, sentence);

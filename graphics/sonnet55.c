@@ -81,7 +81,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg,
             TextOutW(hdc, 50, 220, ver11, lstrlenW(ver11));
             TextOutW(hdc, 50, 240, ver12, lstrlenW(ver12));
             TextOutW(hdc, 50, 260, ver13, lstrlenW(ver13));
-            TextOu tW(hdc, 50, 280, ver14, lstrlenW(ver14));
+            TextOutW(hdc, 50, 280, ver14, lstrlenW(ver14));
 
             SelectObject(hdc, holdFont);
             DeleteObject(hFont);
